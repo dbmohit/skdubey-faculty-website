@@ -122,16 +122,15 @@ img {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease;
   flex-shrink: 0;
-}
-
-.iitd-logo-badge:hover {
-  transform: scale(1.03);
+  width: 72px;
+  height: 72px;
 }
 
 .iitd-logo-badge img {
+  width: 60px;
   height: 60px;
-  width: auto;
   object-fit: contain;
+  display: block;
 }
 
 .iitd-titles {
@@ -1386,10 +1385,14 @@ img {
 }
 
 .footer-brand img {
+  width: 64px;
   height: 64px;
-  background: #fff;
+  background: #ffffff;
   padding: 4px;
   border-radius: var(--radius-sm);
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
 }
 
 .footer-brand h4 {
