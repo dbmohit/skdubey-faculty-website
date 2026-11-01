@@ -1,0 +1,1551 @@
+/* ==========================================================================
+   Faculty Website: Dr. Sarvesh Kumar Dubey
+   Centre for Atmospheric Sciences, Indian Institute of Technology Delhi
+   Design System & Modern Academic Styling
+   ========================================================================== */
+
+:root {
+  --iitd-maroon: #8D1437;
+  --iitd-maroon-dark: #680d27;
+  --iitd-maroon-light: #ab2148;
+  --iitd-navy: #0e2a47;
+  --iitd-navy-dark: #07192c;
+  --iitd-navy-light: #1b4976;
+  --iitd-gold: #c99738;
+  --iitd-gold-light: #fef8eb;
+  --iitd-gold-dark: #a87922;
+
+  --bg-primary: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-secondary: #f1f5f9;
+  --border-color: #e2e8f0;
+  --border-focus: #cbd5e1;
+
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --text-white: #ffffff;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --max-width: 1200px;
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-main);
+  background-color: var(--bg-primary);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--iitd-navy-light);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--iitd-maroon);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ==========================================================================
+   TOP INSTITUTIONAL BANNER
+   ========================================================================== */
+.iitd-topbar {
+  background: linear-gradient(135deg, var(--iitd-maroon-dark) 0%, var(--iitd-maroon) 50%, #9e1c41 100%);
+  color: var(--text-white);
+  border-bottom: 3px solid var(--iitd-gold);
+  position: relative;
+  z-index: 50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.iitd-topbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.5rem;
+  gap: 1.5rem;
+}
+
+.iitd-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.iitd-logo-badge {
+  background: #ffffff;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.iitd-logo-badge:hover {
+  transform: scale(1.03);
+}
+
+.iitd-logo-badge img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.iitd-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.iitd-hindi-name {
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  color: #ffeed3;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.iitd-english-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.25;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.iitd-dept-name {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #fce7eb;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.iitd-dept-name .badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.iitd-topbar-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.top-pill-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: var(--transition);
+}
+
+.top-pill-link:hover {
+  background: #ffffff;
+  color: var(--iitd-maroon-dark);
+  border-color: #ffffff;
+}
+
+.top-pill-link.highlight {
+  background: var(--iitd-gold);
+  color: var(--iitd-navy-dark);
+  border-color: var(--iitd-gold);
+  font-weight: 600;
+}
+
+.top-pill-link.highlight:hover {
+  background: #f1bf55;
+  color: #000;
+}
+
+/* ==========================================================================
+   NAVIGATION BAR
+   ========================================================================== */
+.main-nav-wrapper {
+  background: var(--iitd-navy);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  height: 54px;
+}
+
+.nav-faculty-name {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 0.3px;
+}
+
+.nav-faculty-name:hover {
+  color: var(--iitd-gold);
+}
+
+.nav-faculty-name .sub-role {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #94a3b8;
+  display: inline-block;
+  padding-left: 0.5rem;
+  border-left: 1px solid #334155;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 0.25rem;
+  height: 100%;
+}
+
+.nav-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: #cbd5e1;
+  font-weight: 500;
+  font-size: 0.88rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  position: relative;
+  transition: var(--transition);
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0.85rem;
+  right: 0.85rem;
+  height: 3px;
+  background: var(--iitd-gold);
+  border-radius: 2px 2px 0 0;
+}
+
+.nav-link .badge-count {
+  background: var(--iitd-maroon);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: var(--radius-full);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-size: 1.25rem;
+  padding: 0.4rem 0.65rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   HERO / PROFILE IDENTITY SECTION
+   ========================================================================== */
+.hero-section {
+  background: linear-gradient(180deg, #ffffff 0%, var(--bg-primary) 100%);
+  border-bottom: 1px solid var(--border-color);
+  padding: 3rem 0 2.5rem;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.profile-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  text-align: center;
+  position: relative;
+}
+
+.photo-container {
+  position: relative;
+  width: 220px;
+  height: 235px;
+  margin: 0 auto 1.25rem;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border: 4px solid #ffffff;
+  outline: 2px solid var(--iitd-maroon);
+}
+
+.photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.profile-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #ecfdf5;
+  color: #065f46;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.75rem;
+  border: 1px solid #a7f3d0;
+}
+
+.profile-status-badge::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+}
+
+.quick-contact-list {
+  list-style: none;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-color);
+  text-align: left;
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.quick-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  color: var(--text-muted);
+}
+
+.quick-contact-item strong {
+  color: var(--text-main);
+  min-width: 50px;
+}
+
+.quick-contact-item svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--iitd-maroon);
+}
+
+.profile-hero-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.faculty-title-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--iitd-maroon);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.faculty-title-tag::before {
+  content: "";
+  width: 18px;
+  height: 3px;
+  background: var(--iitd-maroon);
+  border-radius: 2px;
+}
+
+.faculty-main-heading {
+  font-size: 2.35rem;
+  font-weight: 800;
+  color: var(--iitd-navy);
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+
+.faculty-designation {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.35rem;
+}
+
+.faculty-designation .tenure-note {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--iitd-maroon);
+  background: var(--iitd-gold-light);
+  border: 1px solid #f9dfad;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  margin-left: 0.5rem;
+  white-space: nowrap;
+}
+
+.faculty-affiliation {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+.faculty-research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.research-tag {
+  background: var(--bg-secondary);
+  color: var(--iitd-navy);
+  border: 1px solid var(--border-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: var(--transition);
+}
+
+.research-tag:hover {
+  background: #e2e8f0;
+  border-color: #cbd5e1;
+}
+
+/* Scholarly Identity Cards */
+.scholar-badges {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.scholar-badge-card {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: #ffffff;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.scholar-badge-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--iitd-navy-light);
+}
+
+.scholar-badge-card img, .scholar-badge-card svg {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.scholar-badge-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.scholar-badge-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.scholar-badge-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   MAIN CONTENT LAYOUT & SECTIONS
+   ========================================================================== */
+.main-content {
+  flex: 1;
+  padding: 2.5rem 0;
+}
+
+.section-wrapper {
+  margin-bottom: 3.5rem;
+  scroll-margin-top: 75px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--border-color);
+  position: relative;
+}
+
+.section-header::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--iitd-maroon);
+}
+
+.section-title {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--iitd-navy);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.section-title svg {
+  color: var(--iitd-maroon);
+}
+
+.section-header-action {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+/* Cards & Content blocks */
+.content-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.5rem;
+  transition: var(--transition);
+}
+
+.content-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.prose-text {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: #334155;
+  text-align: justify;
+}
+
+.prose-text p {
+  margin-bottom: 1.25rem;
+}
+
+.prose-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* tropX Lab Highlight Banner */
+.tropx-banner-card {
+  background: linear-gradient(135deg, #0d233a 0%, #173b5c 100%);
+  color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 220px 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  box-shadow: var(--shadow-lg);
+  margin-top: 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tropx-logo-box {
+  background: #ffffff;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tropx-logo-box img {
+  max-height: 120px;
+  width: auto;
+  object-fit: contain;
+}
+
+.tropx-content h3 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tropx-content h3 .tag {
+  background: var(--iitd-gold);
+  color: var(--iitd-navy-dark);
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.tropx-content p {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.btn-tropx {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  color: var(--iitd-navy);
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.btn-tropx:hover {
+  background: var(--iitd-gold);
+  color: var(--iitd-navy-dark);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   BIOSKETCH & TIMELINES
+   ========================================================================== */
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.subsection-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--iitd-navy);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.subsection-title svg {
+  color: var(--iitd-maroon);
+}
+
+/* Area of interest cards */
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.interest-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--iitd-maroon);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: var(--transition);
+}
+
+.interest-card:hover {
+  transform: translateX(4px);
+  border-left-color: var(--iitd-gold);
+  box-shadow: var(--shadow-md);
+}
+
+.interest-icon {
+  background: #fdf2f4;
+  color: var(--iitd-maroon);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.interest-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.interest-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Modern Timelines */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 7px;
+  width: 2px;
+  background: #e2e8f0;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 5px;
+  left: -2rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid var(--iitd-maroon);
+  box-shadow: 0 0 0 2px rgba(141, 20, 55, 0.15);
+}
+
+.timeline-dot.gold {
+  border-color: var(--iitd-gold);
+  box-shadow: 0 0 0 2px rgba(201, 151, 56, 0.2);
+}
+
+.timeline-content {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.timeline-content:hover {
+  border-color: #cbd5e1;
+  box-shadow: var(--shadow-md);
+}
+
+.timeline-period {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--iitd-maroon);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+}
+
+.timeline-role {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-place {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   PUBLICATIONS SECTION & INTERACTIVE CONTROLS
+   ========================================================================== */
+.pub-toolbar {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.pub-filters {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.pub-filter-btn {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.pub-filter-btn:hover {
+  background: #e2e8f0;
+}
+
+.pub-filter-btn.active {
+  background: var(--iitd-navy);
+  color: #ffffff;
+  border-color: var(--iitd-navy);
+}
+
+.pub-search-box {
+  position: relative;
+  min-width: 260px;
+  flex: 1;
+  max-width: 360px;
+}
+
+.pub-search-box input {
+  width: 100%;
+  padding: 0.5rem 1rem 0.5rem 2.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  font-size: 0.88rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.pub-search-box input:focus {
+  border-color: var(--iitd-navy);
+  box-shadow: 0 0 0 3px rgba(14, 42, 71, 0.1);
+}
+
+.pub-search-box svg {
+  position: absolute;
+  top: 50%;
+  left: 0.85rem;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  width: 16px;
+  height: 16px;
+}
+
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.pub-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.35rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 1.25rem;
+  transition: var(--transition);
+}
+
+.pub-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: #cbd5e1;
+}
+
+.pub-index {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--iitd-maroon);
+  background: #fdf2f4;
+  height: 44px;
+  width: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pub-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.pub-meta-top {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.2rem;
+  flex-wrap: wrap;
+}
+
+.pub-year-badge {
+  background: var(--iitd-gold-light);
+  color: var(--iitd-gold-dark);
+  border: 1px solid #f8e1b4;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.pub-type-badge {
+  background: #eff6ff;
+  color: #1e40af;
+  border: 1px solid #dbeafe;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+}
+
+.pub-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--iitd-navy);
+  line-height: 1.45;
+}
+
+.pub-authors {
+  font-size: 0.92rem;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.pub-authors strong {
+  color: var(--iitd-maroon);
+  font-weight: 700;
+}
+
+.pub-venue {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.pub-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.pub-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background: #ffffff;
+  color: var(--iitd-navy);
+  transition: var(--transition);
+}
+
+.pub-link-btn:hover {
+  background: var(--iitd-navy);
+  color: #ffffff;
+  border-color: var(--iitd-navy);
+}
+
+/* ==========================================================================
+   SPONSORED RESEARCH PROJECTS
+   ========================================================================== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  border-top: 4px solid var(--iitd-maroon);
+  transition: var(--transition);
+}
+
+.project-card.ongoing {
+  border-top-color: #10b981;
+}
+
+.project-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.project-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.project-status.ongoing {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.project-status.completed {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+
+.project-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--iitd-navy);
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.project-details {
+  list-style: none;
+  font-size: 0.88rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.85rem;
+  margin-top: auto;
+}
+
+.project-detail-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.project-detail-label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.project-detail-val {
+  font-weight: 600;
+  color: var(--text-main);
+  text-align: right;
+}
+
+/* ==========================================================================
+   RESEARCH GROUP / STUDENTS
+   ========================================================================== */
+.students-tabs {
+  margin-top: 1.5rem;
+}
+
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.student-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: var(--transition);
+}
+
+.student-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: #cbd5e1;
+}
+
+.student-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--iitd-navy) 0%, var(--iitd-navy-light) 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.student-info h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.2rem;
+}
+
+.student-info .student-joined {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--iitd-maroon);
+  margin-bottom: 0.25rem;
+}
+
+.student-info .student-topic {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   COURSES & TEACHING
+   ========================================================================== */
+.courses-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.course-year-block {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.course-year-header {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--iitd-maroon);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.course-cards-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.course-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.course-code-badge {
+  background: var(--iitd-navy);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.65rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.course-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* ==========================================================================
+   CONTACT SECTION
+   ========================================================================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.contact-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--iitd-navy);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-details-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  background: #fdf2f4;
+  color: var(--iitd-maroon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-item-info h5 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.contact-item-info p, .contact-item-info a {
+  font-size: 1rem;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.copy-btn {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.copy-btn:hover {
+  background: var(--iitd-navy);
+  color: #fff;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.site-footer {
+  background: var(--iitd-navy-dark);
+  color: #cbd5e1;
+  padding: 3rem 0 1.5rem;
+  border-top: 4px solid var(--iitd-maroon);
+  margin-top: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.footer-brand img {
+  height: 64px;
+  background: #fff;
+  padding: 4px;
+  border-radius: var(--radius-sm);
+}
+
+.footer-brand h4 {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.footer-brand p {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #94a3b8;
+}
+
+.footer-column h5 {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--iitd-gold);
+  padding-bottom: 0.35rem;
+  display: inline-block;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+}
+
+.footer-links a {
+  color: #94a3b8;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  padding-left: 4px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1e3a5f;
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #64748b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .profile-card {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .grid-2col, .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tropx-banner-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .tropx-logo-box {
+    margin: 0 auto;
+  }
+
+  .btn-tropx {
+    margin: 0 auto;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .iitd-topbar-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .iitd-topbar-links {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 54px;
+    left: 0;
+    right: 0;
+    background: var(--iitd-navy-dark);
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    border-top: 1px solid #1e3a5f;
+    box-shadow: var(--shadow-xl);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-item {
+    width: 100%;
+    height: auto;
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+
+  .faculty-main-heading {
+    font-size: 1.85rem;
+  }
+
+  .pub-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pub-search-box {
+    max-width: 100%;
+  }
+
+  .pub-card {
+    grid-template-columns: 1fr;
+  }
+
+  .pub-index {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+}

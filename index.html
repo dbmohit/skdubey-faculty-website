@@ -2,36 +2,1515 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dr. Sarvesh Kumar Dubey | IIT Delhi</title>
-  <link rel="icon" href="iitd-logo-white.png">
-  <style>
-    body {
-      margin: 0; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
-      font-family: "Segoe UI", Arial, sans-serif; font-size: 19px; color: #fff; text-align: center; padding: 24px 16px;
-      background: linear-gradient(135deg, #07182c, #12355b 60%, #1d4f80);
-    }
-    img { width: 110px; }
-    h1 { font-size: 1.9rem; margin: 16px 0 4px; }
-    p { margin: 0 0 28px; color: #f3d9a4; }
-    .choices { display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; }
-    a {
-      display: block; width: 260px; padding: 22px; border-radius: 10px; text-decoration: none; color: #fff;
-      border: 2px solid rgba(255,255,255,.35); background: rgba(255,255,255,.06);
-    }
-    a:hover { border-color: #d6a650; background: rgba(255,255,255,.12); }
-    a strong { display: block; font-size: 1.15rem; margin-bottom: 6px; }
-    a span { font-size: .9rem; opacity: .85; }
-    .term { font-family: Consolas, "DejaVu Sans Mono", monospace; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Sarvesh Kumar Dubey | Centre for Atmospheric Sciences, IIT Delhi</title>
+  <meta name="description" content="Faculty Website of Dr. Sarvesh Kumar Dubey, Associate Professor at the Centre for Atmospheric Sciences, Indian Institute of Technology Delhi. Research in Atmospheric Modeling, NWP, and Multiscale Scale Energetics.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="shortcut icon" href="assets/images/iitd_logo_official.png" type="image/png">
 </head>
 <body>
-  <img src="iitd-logo-white.png" alt="IIT Delhi logo">
-  <h1>Dr. Sarvesh Kumar Dubey</h1>
-  <p>Centre for Atmospheric Sciences, IIT Delhi</p>
-  <div class="choices">
-    <a href="classic/"><strong>Classic design</strong><span>Clean academic layout</span></a>
-    <a href="terminal/" class="term"><strong>&gt;_ Terminal design</strong><span>GitHub / terminal style</span></a>
-  </div>
+
+  <!-- ========================================================================
+       TOP INSTITUTIONAL BANNER (IIT DELHI BRANDING)
+       ======================================================================== -->
+  <header class="iitd-topbar">
+    <div class="container iitd-topbar-content">
+      <div class="iitd-brand-group">
+        <a href="https://home.iitd.ac.in" target="_blank" rel="noopener noreferrer" class="iitd-logo-badge" title="IIT Delhi Official Website">
+          <img src="assets/images/iitd_logo_official.png" alt="IIT Delhi Crest Logo">
+        </a>
+        <div class="iitd-titles">
+          <span class="iitd-hindi-name">भारतीय प्रौद्योगिकी संस्थान दिल्ली</span>
+          <span class="iitd-english-name">Indian Institute of Technology Delhi</span>
+          <span class="iitd-dept-name">
+            Centre for Atmospheric Sciences
+            <span class="badge">CAS IITD</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="iitd-topbar-links">
+        <a href="https://cas.iitd.ac.in" target="_blank" rel="noopener noreferrer" class="top-pill-link">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg>
+          CAS Portal
+        </a>
+        <a href="https://home.iitd.ac.in" target="_blank" rel="noopener noreferrer" class="top-pill-link">
+          IITD Main
+        </a>
+        <a href="https://tropx.iitd.ac.in" target="_blank" rel="noopener noreferrer" class="top-pill-link highlight">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          tropX Lab
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       STICKY FACULTY NAVIGATION BAR
+       ======================================================================== -->
+  <nav class="main-nav-wrapper">
+    <div class="container main-nav">
+      <a href="#about" class="nav-faculty-name">
+        Dr. Sarvesh Kumar Dubey
+        <span class="sub-role">Associate Professor</span>
+      </a>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+        &#9776;
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="#about" class="nav-link active">About</a></li>
+        <li class="nav-item"><a href="#biosketch" class="nav-link">Bio-Sketch</a></li>
+        <li class="nav-item"><a href="#research" class="nav-link">Research</a></li>
+        <li class="nav-item"><a href="#publications" class="nav-link">Publications <span class="badge-count">22</span></a></li>
+        <li class="nav-item"><a href="#projects" class="nav-link">Projects <span class="badge-count">8</span></a></li>
+        <li class="nav-item"><a href="#students" class="nav-link">Group <span class="badge-count">16</span></a></li>
+        <li class="nav-item"><a href="#courses" class="nav-link">Courses</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========================================================================
+       HERO / PROFILE OVERVIEW SECTION
+       ======================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="profile-grid">
+        
+        <!-- Left Profile Card -->
+        <aside class="profile-card">
+          <div class="photo-container">
+            <img src="assets/images/myphoto.jpeg" alt="Dr. Sarvesh Kumar Dubey">
+          </div>
+          
+          <div class="profile-status-badge">Faculty Member @ CAS IITD</div>
+          
+          <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--iitd-navy);">Dr. Sarvesh K. Dubey</h2>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.5rem;">Ph.D., IIT Delhi</p>
+
+          <ul class="quick-contact-list">
+            <li class="quick-contact-item">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <div>
+                <strong>Email:</strong><br>
+                <a href="mailto:skdubey@cas.iitd.ac.in">skdubey@cas.iitd.ac.in</a>
+              </div>
+            </li>
+            <li class="quick-contact-item">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <div>
+                <strong>Phone:</strong><br>
+                <span>+91-11-2654-8417</span>
+              </div>
+            </li>
+            <li class="quick-contact-item">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <div>
+                <strong>Office:</strong><br>
+                <span>Centre for Atmospheric Sciences, IIT Delhi, Hauz Khas, New Delhi 110016</span>
+              </div>
+            </li>
+          </ul>
+        </aside>
+
+        <!-- Right Hero Information -->
+        <div class="profile-hero-content">
+          <span class="faculty-title-tag">Academic Faculty Profile</span>
+          <h1 class="faculty-main-heading">Dr. Sarvesh Kumar Dubey</h1>
+          
+          <div class="faculty-designation">
+            Associate Professor 
+            <span class="tenure-note">from June 2026</span>
+          </div>
+          <div class="faculty-affiliation">
+            Centre for Atmospheric Sciences &bull; Indian Institute of Technology Delhi
+          </div>
+
+          <!-- Research Focus Tags -->
+          <div class="faculty-research-tags">
+            <span class="research-tag">
+              <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Atmospheric Model Development
+            </span>
+            <span class="research-tag">
+              <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Numerical Weather Prediction (NWP)
+            </span>
+            <span class="research-tag">
+              <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Tropical Meteorology & Monsoons
+            </span>
+            <span class="research-tag">
+              <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Scale Energetics & Nonlinear Dynamics
+            </span>
+            <span class="research-tag">
+              <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Geodesic Grids & Dynamical Cores
+            </span>
+            <span class="research-tag">
+              <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              AI/ML in Earth Sciences
+            </span>
+          </div>
+
+          <!-- Scholarly Profile Badges -->
+          <div class="scholar-badges">
+            <a href="https://scholar.google.co.in/citations?user=Z5Tkv24AAAAJ&hl=en&oi=sra" target="_blank" rel="noopener noreferrer" class="scholar-badge-card">
+              <img src="assets/images/GScholar.png" alt="Google Scholar Logo">
+              <div class="scholar-badge-info">
+                <span class="scholar-badge-name">Google Scholar</span>
+                <span class="scholar-badge-sub">Citations & Metrics</span>
+              </div>
+            </a>
+
+            <a href="https://orcid.org/0000-0003-3454-6864" target="_blank" rel="noopener noreferrer" class="scholar-badge-card">
+              <img src="assets/images/ID.png" alt="ORCID Logo">
+              <div class="scholar-badge-info">
+                <span class="scholar-badge-name">ORCID</span>
+                <span class="scholar-badge-sub">0000-0003-3454-6864</span>
+              </div>
+            </a>
+
+            <a href="https://www.researchgate.net/profile/Sarvesh_Dubey2" target="_blank" rel="noopener noreferrer" class="scholar-badge-card">
+              <img src="assets/images/researchgate.svg" alt="ResearchGate Logo">
+              <div class="scholar-badge-info">
+                <span class="scholar-badge-name">ResearchGate</span>
+                <span class="scholar-badge-sub">Research Profile</span>
+              </div>
+            </a>
+
+            <a href="https://tropx.iitd.ac.in" target="_blank" rel="noopener noreferrer" class="scholar-badge-card">
+              <img src="assets/images/TropXLogo.jpg" alt="tropX Logo" style="border-radius: 4px;">
+              <div class="scholar-badge-info">
+                <span class="scholar-badge-name">tropX Lab</span>
+                <span class="scholar-badge-sub">tropx.iitd.ac.in</span>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       MAIN CONTENT CONTAINER
+       ======================================================================== -->
+  <main class="main-content container">
+
+    <!-- 1. ABOUT & LAB SECTION -->
+    <section class="section-wrapper" id="about">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          About & Research Philosophy
+        </h2>
+      </div>
+
+      <div class="content-card">
+        <div class="prose-text">
+          <p>
+            <strong>Sarvesh Kumar Dubey</strong> is an Associate Professor at the Centre for Atmospheric Sciences, Indian Institute of Technology Delhi (from June 2026). He joined CAS as an Assistant Professor in June 2019. His research primarily focuses on advancing atmospheric modeling through numerical and data-driven frameworks, with particular emphasis on understanding multi-scale interactions in the tropical atmosphere.
+          </p>
+          <p>
+            His work integrates theoretical modeling, numerical experimentation, and observational analysis to explore the energy budget and nonlinear scale interactions across phenomena such as intraseasonal oscillations (MJO/BSISO), the Indian summer monsoon, ENSO, synoptic systems, and organized convection.
+          </p>
+          <p>
+            During his doctoral and postdoctoral research, he contributed to the development of advanced global modeling frameworks aimed at improving the representation of atmospheric dynamics in Earth System Models. At IIT Delhi, his research group continues to bridge large-scale modeling and data-driven diagnostics to address fundamental questions in tropical meteorology and climate variability.
+          </p>
+        </div>
+
+        <!-- tropX Group Spotlight Banner -->
+        <div class="tropx-banner-card">
+          <div class="tropx-logo-box">
+            <img src="assets/images/TropXLogo.jpg" alt="tropX Research Group Logo">
+          </div>
+          <div class="tropx-content">
+            <h3>tropX Research Group <span class="tag">Tropical Extremes & Dynamics</span></h3>
+            <p>
+              Dedicated to cutting-edge research in tropical weather dynamics, multi-scale scale energetics, high-resolution numerical weather prediction, and AI-driven meteorological applications. Explore our ongoing projects, student publications, dataset portals, and team members.
+            </p>
+          </div>
+          <div>
+            <a href="https://tropx.iitd.ac.in" target="_blank" rel="noopener noreferrer" class="btn-tropx">
+              Visit tropX Webpage &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. BIOSKETCH SECTION -->
+    <section class="section-wrapper" id="biosketch">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          Bio-Sketch & Academic Background
+        </h2>
+      </div>
+
+      <!-- Core Areas of Interest -->
+      <h3 class="subsection-title">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Areas of Interest
+      </h3>
+      <div class="interest-grid">
+        <div class="interest-card">
+          <div class="interest-icon">
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+          </div>
+          <div>
+            <h4>Atmospheric Model Development</h4>
+            <p>Formulation of dynamical cores, geodesic grids (icosahedral-hexagonal), and transport schemes.</p>
+          </div>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-icon">
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 14.93V18h-2v-1.07A7.002 7.002 0 015.07 13H4v-2h1.07A7.002 7.002 0 0111 5.07V4h2v1.07A7.002 7.002 0 0118.93 11H20v2h-1.07A7.002 7.002 0 0113 16.93z"/></svg>
+          </div>
+          <div>
+            <h4>Numerical Weather Prediction (NWP)</h4>
+            <p>High-resolution forecasting, model physics error analysis, and ensemble prediction systems.</p>
+          </div>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-icon">
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+          </div>
+          <div>
+            <h4>Observational Analysis</h4>
+            <p>Empirical diagnostic frameworks, climate variability, and multi-sensor data assimilation.</p>
+          </div>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-icon">
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          </div>
+          <div>
+            <h4>Tropical Meteorology</h4>
+            <p>Monsoon dynamics, MJO, ENSO, tropical cyclones, convection, and scale energetics.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience & Qualifications Grid -->
+      <div class="grid-2col">
+        <!-- Positions Held Timeline -->
+        <div>
+          <h3 class="subsection-title">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+            Positions Held
+          </h3>
+          <div class="timeline">
+            
+            <div class="timeline-item">
+              <div class="timeline-dot gold"></div>
+              <div class="timeline-content">
+                <span class="timeline-period">June 2026 – Present</span>
+                <h4 class="timeline-role">Associate Professor</h4>
+                <p class="timeline-place">Centre for Atmospheric Sciences, Indian Institute of Technology Delhi, India</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-period">June 2019 – June 2026</span>
+                <h4 class="timeline-role">Assistant Professor</h4>
+                <p class="timeline-place">Centre for Atmospheric Sciences, Indian Institute of Technology Delhi, India</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-period">Aug 2018 – June 2019</span>
+                <h4 class="timeline-role">DST INSPIRE Faculty</h4>
+                <p class="timeline-place">Earth and Climate Science Department, IISER Pune, Pune, India</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-period">April 2014 – July 2018</span>
+                <h4 class="timeline-role">Post Doctoral Fellow</h4>
+                <p class="timeline-place">EOAS, Florida State University (FSU), Tallahassee, Florida, USA</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-period">Nov 2013 – Jan 2014</span>
+                <h4 class="timeline-role">Research Associate</h4>
+                <p class="timeline-place">Centre for Atmospheric Sciences, IIT Delhi, India</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-period">Aug 2010 – Oct 2013</span>
+                <h4 class="timeline-role">Senior Research Fellow (SRF)</h4>
+                <p class="timeline-place">Centre for Atmospheric Sciences, IIT Delhi, India</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-period">Jan 2008 – July 2010</span>
+                <h4 class="timeline-role">Junior Research Fellow (JRF)</h4>
+                <p class="timeline-place">Department of Mathematics, IIT Delhi, India</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Educational Qualifications Timeline -->
+        <div>
+          <h3 class="subsection-title">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+            Qualifications & Education
+          </h3>
+          <div class="timeline">
+            
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-period">2014</span>
+                <h4 class="timeline-role">Doctor of Philosophy (Ph.D.)</h4>
+                <p class="timeline-place"><strong>Mathematics</strong>, Indian Institute of Technology Delhi (IIT Delhi), New Delhi, India</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-period">2006</span>
+                <h4 class="timeline-role">Master of Science (M.Sc.)</h4>
+                <p class="timeline-place"><strong>Mathematics</strong>, Deen Dayal Upadhyaya Gorakhpur University, Gorakhpur, Uttar Pradesh, India</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-period">2004</span>
+                <h4 class="timeline-role">Bachelor of Science (B.Sc.)</h4>
+                <p class="timeline-place"><strong>Mathematics and Physics</strong>, Deen Dayal Upadhyaya Gorakhpur University, Gorakhpur, Uttar Pradesh, India</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. RESEARCH PILLARS SECTION -->
+    <section class="section-wrapper" id="research">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9z"/></svg>
+          Research Themes & Contributions
+        </h2>
+      </div>
+
+      <div class="interest-grid">
+        <div class="content-card" style="margin-bottom: 0;">
+          <h4 style="color: var(--iitd-navy); font-size: 1.15rem; margin-bottom: 0.5rem;">Geodesic Grids & Dynamical Cores</h4>
+          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+            Formulation and evaluation of advanced conservative multi-tracer transport schemes (such as FF-CSLAM) and hydrostatic/non-hydrostatic dynamical cores (DYNAMICO, MPAS) on icosahedral-hexagonal meshes, avoiding pole singularities and conserving global properties.
+          </p>
+        </div>
+
+        <div class="content-card" style="margin-bottom: 0;">
+          <h4 style="color: var(--iitd-navy); font-size: 1.15rem; margin-bottom: 0.5rem;">Nonlinear Scale Energetics</h4>
+          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+            Pioneering spectral kinetic and available potential energy exchange diagnostics between the Madden-Julian Oscillation (MJO), equatorial waves (MRG), synoptic disturbances, and monsoon low-pressure systems across spatial and temporal hierarchies.
+          </p>
+        </div>
+
+        <div class="content-card" style="margin-bottom: 0;">
+          <h4 style="color: var(--iitd-navy); font-size: 1.15rem; margin-bottom: 0.5rem;">Tropical Cyclones & Rapid Intensification</h4>
+          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+            Energetics of vortex-scale and sub-vortex-scale asymmetries in cyclogenesis. Investigating environmental drivers, moisture fluxes, and rapid intensity changes of cyclones over the Bay of Bengal and Arabian Sea.
+          </p>
+        </div>
+
+        <div class="content-card" style="margin-bottom: 0;">
+          <h4 style="color: var(--iitd-navy); font-size: 1.15rem; margin-bottom: 0.5rem;">Machine Learning & Data Assimilation</h4>
+          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+            Developing ML-driven super ensembles for operational weather prediction (NCMRWF), hybrid background error covariance matrix formulations, and deep learning for lightning-assisted thunderstorm intensity prediction.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PUBLICATIONS SECTION (WITH LIVE SEARCH & FILTER) -->
+    <section class="section-wrapper" id="publications">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/></svg>
+          Publications & Presentations (<span id="pubVisibleCount">22</span>)
+        </h2>
+      </div>
+
+      <!-- Publication Filter & Search Toolbar -->
+      <div class="pub-toolbar">
+        <div class="pub-filters">
+          <button class="pub-filter-btn active" data-filter="all">All (22)</button>
+          <button class="pub-filter-btn" data-filter="journal">Refereed Journals (15)</button>
+          <button class="pub-filter-btn" data-filter="conference">Conferences & Proceedings (7)</button>
+        </div>
+
+        <div class="pub-search-box">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          <input type="text" id="pubSearchInput" placeholder="Search by title, author, year, journal...">
+        </div>
+      </div>
+
+      <!-- Publications List -->
+      <div class="pub-list" id="pubList">
+
+        <!-- 1 -->
+        <article class="pub-card" data-type="journal">
+          <div class="pub-index">1</div>
+          <div class="pub-body">
+            <div class="pub-meta-top">
+              <span class="pub-year-badge">2026</span>
+              <span class="pub-type-badge">Journal Article</span>
+            </div>
+            <h3 class="pub-title">Formulation of background error covariance matrix in data assimilation and its impact on prediction of very heavy rainfall over Indian region during South West monsoon season</h3>
+            <p class="pub-authors">M. Chandragiri, <strong>S. Dubey</strong>, S. Roy, and J. George</p>
+            <p class="pub-venue"><em>Meteorol. Atmos. Phys.</em>, 138, 21 (2026)</p>
+            <div class="pub-actions">
+              <a href="https://doi.org/10.1007/s00703-026-01124-z" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                DOI: 10.1007/s00703-026-01124-z
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="pub-card" data-type="journal">
+          <div class="pub-index">2</div>
+          <div class="pub-body">
+            <div class="pub-meta-top">
+              <span class="pub-year-badge">2025</span>
+              <span class="pub-type-badge">Journal Article</span>
+            </div>
+            <h3 class="pub-title">Understanding rapid intensification of tropical cyclones in the Bay of Bengal through energetics perspective</h3>
+            <p class="pub-authors">G. Suresh, <strong>S. Dubey</strong>, and N. Karmakar</p>
+            <p class="pub-venue"><em>J. Geophys. Res. Atmos.</em>, 130, e2025JD044489 (2025)</p>
+            <div class="pub-actions">
+              <a href="https://doi.org/10.1029/2025JD044489" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                DOI: 10.1029/2025JD044489
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="pub-card" data-type="journal">
+          <div class="pub-index">3</div>
+          <div class="pub-body">
+            <div class="pub-meta-top">
+              <span class="pub-year-badge">2025</span>
+              <span class="pub-type-badge">Journal Article</span>
+            </div>
+            <h3 class="pub-title">Mesoscale convective systems over South Asia: Unraveling climatology, land-ocean differences and environmental drivers</h3>
+            <p class="pub-authors">D. Paul, <strong>S. Dubey</strong>, and W. Cui</p>
+            <p class="pub-venue"><em>Clim. Dyn.</em>, 63, 419 (2025)</p>
+            <div class="pub-actions">
+              <a href="https://doi.org/10.1007/s00382-025-07844-z" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                DOI: 10.1007/s00382-025-07844-z
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="pub-card" data-type="journal">
+          <div class="pub-index">4</div>
+          <div class="pub-body">
+            <div class="pub-meta-top">
+              <span class="pub-year-badge">2025</span>
+              <span class="pub-type-badge">Journal Article</span>
+            </div>
+            <h3 class="pub-title">Characteristics of spectral energetics during contrasting rainfall years in Central India</h3>
+            <p class="pub-authors">R. Dhishana, <strong>S. Dubey</strong>, R. Singh, and S. Das</p>
+            <p class="pub-venue"><em>Theor. Appl. Climatol.</em>, 156, 48 (2025)</p>
+            <div class="pub-actions">
+              <a href="https://doi.org/10.1007/s00704-024-05235-8" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                DOI: 10.1007/s00704-024-05235-8
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="pub-card" data-type="journal">
+          <div class="pub-index">5</div>
+          <div class="pub-body">
+            <div class="pub-meta-top">
+              <span class="pub-year-badge">2025</span>
+              <span class="pub-type-badge">Journal Article</span>
+            </div>
+            <h3 class="pub-title">Characterizing the South Asian summer monsoon in the Model for Prediction Across Scales through quasi-uniform and variable resolution</h3>
+            <p class="pub-authors">D. Paul and <strong>S. Dubey</strong></p>
+            <p class="pub-venue"><em>Meteorol. Atmos. Phys.</em>, 137, 40 (2025)</p>
+            <div class="pub-actions">
+              <a href="https://doi.org/10.1007/s00703-025-01086-8" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                DOI: 10.1007/s00703-025-01086-8
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="pub-card" data-type="journal">
+          <div class="pub-index">6</div>
+          <div class="pub-body">
+            <div class="pub-meta-top">
+              <span class="pub-year-badge">2024</span>
+              <span class="pub-type-badge">Journal Article</span>
+            </div>
+            <h3 class="pub-title">Optimization of hybrid data assimilation for cases of very heavy rainfall events over the Indian region</h3>
+            <p class="pub-authors">M. Chandragiri, <strong>S. Dubey</strong>, S. Roy, and J. George</p>
+            <p class="pub-venue"><em>Bulletin of Atmospheric Science and Technology</em>, 5 (2024)</p>
+            <div class="pub-actions">
+              <a href="https://doi.org/10.1007/s42865-024-00087-6" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                DOI: 10.1007/s42865-024-00087-6
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7 -->
+        <article class="pub-card" data-type="journal">
+          <div class="pub-index">7</div>
+          <div class="pub-body">
+            <div class="pub-meta-top">
+              <span class="pub-year-badge">2020</span>
+              <span class="pub-type-badge">Journal Article</span>
+            </div>
+            <h3 class="pub-title">Characterizing the Energetics of Vortex-Scale and Sub-Vortex-Scale Asymmetries during Tropical Cyclone Rapid Intensity Changes</h3>
+            <p class="pub-authors">S. Bhalachandran, D. R. Chavas, F. D. Marks Jr., <strong>S. Dubey</strong>, A. Shreevastava, and T. N. Krishnamurti</p>
+            <p class="pub-venue"><em>J. Atmos. Sci.</em>, vol. 77, pp. 315–336 (2020)</p>
+            <div class="pub-actions">
+              <a href="https://doi.org/10.1175/JAS-D-19-0067.1" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                DOI: 10.1175/JAS-D-19-0067.1
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8 -->
+        <article class="pub-card" data-type="journal">
+          <div class="pub-index">8</div>
+          <div class="pub-body">
+            <div class="pub-meta-top">
+              <span class="pub-year-badge">2019</span>
+              <span class="pub-type-badge">Journal Article</span>
+            </div>
+            <h3 class="pub-title">Understanding the interannual variations of the zonal mean Indian summer monsoon seasonal rainfall</h3>
+            <p class="pub-authors"><strong>S. Dubey</strong> and V. Misra</p>
+            <p class="pub-venue"><em>Clim. Dyn.</em>, vol. 53, pp. 5547–5559 (2019)</p>
+            <div class="pub-actions">
+              <a href="https://doi.org/10.1007/s00382-019-04881-3" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                DOI: 10.1007/s00382-019-04881-3
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 9 -->
+        <article class="pub-card" data-type="journal">
+          <div class="pub-index">9</div>
+          <div class="pub-body">
+            <div class="pub-meta-top">
+              <span class="pub-year-badge">2018</span>
+              <span class="pub-type-badge">Journal Article</span>
+            </div>
+            <h3 class="pub-title">On Scale Interactions between the MJO and Synoptic Scale</h3>
+            <p class="pub-authors"><strong>S. Dubey</strong>, T. N. Krishnamurti, and V. Kumar</p>
+            <p class="pub-venue"><em>Q. J. R. Meteorol. Soc.</em>, vol. 144, pp. 2727–2747 (2018)</p>
+            <div class="pub-actions">
+              <a href="https://doi.org/10.1002/qj.3400" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                DOI: 10.1002/qj.3400
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 10 -->
+        <article class="pub-card" data-type="journal">
+          <div class="pub-index">10</div>
+          <div class="pub-body">
+            <div class="pub-meta-top">
+              <span class="pub-year-badge">2017</span>
+              <span class="pub-type-badge">Journal Article</span>
+            </div>
+            <h3 class="pub-title">Extreme Orographic Rains from Streams of Moist Marine Layer Wind Systems with a Possible Geoengineering Application</h3>
+            <p class="pub-authors">T. N. Krishnamurti, D. K. Sahu, V. Kumar, R. Krishnamurti, T. Ghosh, A. Simon, A. Thomas, and <strong>S. Dubey</strong></p>
+            <p class="pub-venue"><em>Int. J. Hydro</em>, vol. 7, pp. 1–15 (2017)</p>
+            <div class="pub-actions">
+              <a href="https://doi.org/10.15406/ijh.2017.01.00039" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                DOI: 10.15406/ijh.2017.01.00039
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 11 -->
+        <article class="pub-card" data-type="journal">
+          <div class="pub-index">11</div>
+          <div class="pub-body">
+            <div class="pub-meta-top">
+              <span class="pub-year-badge">2017</span>
+              <span class="pub-type-badge">Journal Article</span>
+            </div>
+            <h3 class="pub-title">Scale interaction during an extreme rain event over southeast India</h3>
+            <p class="pub-authors">T. N. Krishnamurti, <strong>S. Dubey</strong>, V. Kumar, R. Deepa, and A. Bhardwaj</p>
+            <p class="pub-venue"><em>Q. J. R. Meteorol. Soc.</em>, vol. 143, pp. 1442–1458 (2017)</p>
+            <div class="pub-actions">
+              <a href="https://doi.org/10.1002/qj.3016" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                DOI: 10.1002/qj.3016
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 12 -->
+        <article class="pub-card" data-type="journal">
+          <div class="pub-index">12</div>
+          <div class="pub-body">
+            <div class="pub-meta-top">
+              <span class="pub-year-badge">2015</span>
+              <span class="pub-type-badge">Journal Article</span>
+            </div>
+            <h3 class="pub-title">DYNAMICO-1.0, an icosahedral hydrostatic dynamical core designed for consistency and versatility</h3>
+            <p class="pub-authors">T. Dubos, <strong>S. Dubey</strong>, M. Tort, R. Mittal, Y. Meurdesoif, and F. Hourdin</p>
+            <p class="pub-venue"><em>Geosci. Model Dev.</em>, vol. 8, pp. 3131–3150 (2015)</p>
+            <div class="pub-actions">
+              <a href="https://doi.org/10.5194/gmd-8-3131-2015" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                DOI: 10.5194/gmd-8-3131-2015
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 13 -->
+        <article class="pub-card" data-type="journal">
+          <div class="pub-index">13</div>
+          <div class="pub-body">
+            <div class="pub-meta-top">
+              <span class="pub-year-badge">2015</span>
+              <span class="pub-type-badge">Journal Article</span>
+            </div>
+            <h3 class="pub-title">On the inter-comparison of two tracer transport schemes on icosahedral grids</h3>
+            <p class="pub-authors"><strong>S. Dubey</strong>, T. Dubos, F. Hourdin, and H. Upadhyaya</p>
+            <p class="pub-venue"><em>Appl. Math. Model.</em>, vol. 39, pp. 4828–4847 (2015)</p>
+            <div class="pub-actions">
+              <a href="https://doi.org/10.1016/j.apm.2015.04.015" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                DOI: 10.1016/j.apm.2015.04.015
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 14 -->
+        <article class="pub-card" data-type="journal">
+          <div class="pub-index">14</div>
+          <div class="pub-body">
+            <div class="pub-meta-top">
+              <span class="pub-year-badge">2014</span>
+              <span class="pub-type-badge">Journal Article</span>
+            </div>
+            <h3 class="pub-title">A standard test case suite for two-dimensional linear transport on the sphere: Results from a collection of state-of-the-art schemes</h3>
+            <p class="pub-authors">P. Lauritzen, P. Ullrich, C. Jablonowski, P. Bosler, D. Calhoun, A. Conley, T. Enomoto, L. Dong, <strong>S. Dubey</strong>, O. Guba, A. Hansen, E. Kaas, J. Kent, M. Prather, D. Reinert, V. Shashkin, W. Skamarock, B. Sørensen, M. Taylor, and M. Tolstykh</p>
+            <p class="pub-venue"><em>Geosci. Model Dev.</em>, vol. 7, pp. 105–145 (2014)</p>
+            <div class="pub-actions">
+              <a href="https://doi.org/10.5194/gmd-7-105-2014" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                DOI: 10.5194/gmd-7-105-2014
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 15 -->
+        <article class="pub-card" data-type="journal">
+          <div class="pub-index">15</div>
+          <div class="pub-body">
+            <div class="pub-meta-top">
+              <span class="pub-year-badge">2014</span>
+              <span class="pub-type-badge">Journal Article</span>
+            </div>
+            <h3 class="pub-title">A flux-form conservative semi-Lagrangian multitracer transport scheme (FF-CSLAM) for icosahedral-hexagonal grids</h3>
+            <p class="pub-authors"><strong>S. Dubey</strong>, R. Mittal, and P. Lauritzen</p>
+            <p class="pub-venue"><em>J. Adv. Model. Earth Syst.</em>, vol. 6, pp. 332–356 (2014)</p>
+            <div class="pub-actions">
+              <a href="https://doi.org/10.1002/2013MS000259" target="_blank" rel="noopener noreferrer" class="pub-link-btn">
+                <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                DOI: 10.1002/2013MS000259
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 16 (Conf) -->
+        <article class="pub-card" data-type="conference">
+          <div class="pub-index">16</div>
+          <div class="pub-body">
+            <div class="pub-meta-top">
+              <span class="pub-year-badge">2018</span>
+              <span class="pub-type-badge">Conference Paper</span>
+            </div>
+            <h3 class="pub-title">Investigation of the Rapid Intensity Changes of Landfalling Hurricanes Harvey and Irma (2017) through the Formalism of Scale Interactions</h3>
+            <p class="pub-authors">S. Bhalachandran, T. N. Krishnamurti, and <strong>S. Dubey</strong></p>
+            <p class="pub-venue"><em>33rd Conference on Hurricanes and Tropical Meteorology</em>, Ponte Vedra, Florida, USA (2018)</p>
+          </div>
+        </article>
+
+        <!-- 17 (Conf) -->
+        <article class="pub-card" data-type="conference">
+          <div class="pub-index">17</div>
+          <div class="pub-body">
+            <div class="pub-meta-top">
+              <span class="pub-year-badge">2018</span>
+              <span class="pub-type-badge">Conference Paper</span>
+            </div>
+            <h3 class="pub-title">On the Maintenance of Large Anomaly Fields during a Record-Breaking Monsoon Drought via Scale Interactions</h3>
+            <p class="pub-authors"><strong>S. Dubey</strong> and T. N. Krishnamurti</p>
+            <p class="pub-venue"><em>33rd Conference on Hurricanes and Tropical Meteorology</em>, Ponte Vedra, Florida, USA (2018)</p>
+          </div>
+        </article>
+
+        <!-- 18 (Conf) -->
+        <article class="pub-card" data-type="conference">
+          <div class="pub-index">18</div>
+          <div class="pub-body">
+            <div class="pub-meta-top">
+              <span class="pub-year-badge">2017</span>
+              <span class="pub-type-badge">Conference Paper</span>
+            </div>
+            <h3 class="pub-title">Hamiltonian approaches to spatial and temporal discretization of fully compressible equations</h3>
+            <p class="pub-authors">T. Dubos and <strong>S. Dubey</strong></p>
+            <p class="pub-venue"><em>EGU General Assembly</em>, Vienna, Austria (2017)</p>
+          </div>
+        </article>
+
+        <!-- 19 (Conf) -->
+        <article class="pub-card" data-type="conference">
+          <div class="pub-index">19</div>
+          <div class="pub-body">
+            <div class="pub-meta-top">
+              <span class="pub-year-badge">2016</span>
+              <span class="pub-type-badge">Conference Paper</span>
+            </div>
+            <h3 class="pub-title">On the Nonlinear Kinetic Energy Transfer Between MJO and Synoptic Scales</h3>
+            <p class="pub-authors"><strong>S. Dubey</strong> and T. N. Krishnamurti</p>
+            <p class="pub-venue"><em>Fourth Symposium on Prediction of the Madden-Julian Oscillation: Processes, Prediction and Impact</em>, New Orleans, USA (2016)</p>
+          </div>
+        </article>
+
+        <!-- 20 (Conf) -->
+        <article class="pub-card" data-type="conference">
+          <div class="pub-index">20</div>
+          <div class="pub-body">
+            <div class="pub-meta-top">
+              <span class="pub-year-badge">2015</span>
+              <span class="pub-type-badge">Conference Paper</span>
+            </div>
+            <h3 class="pub-title">Using multipliers that statistically tag errors arising from individual terms of model Physics and dynamics in a forecast model for reduction of systematic errors</h3>
+            <p class="pub-authors"><strong>S. Dubey</strong>, T. N. Krishnamurti, A. Bhardwaj, and A. Thomas</p>
+            <p class="pub-venue"><em>95th Annual Meeting, American Meteorological Society (AMS)</em>, Phoenix, Arizona, USA (2015)</p>
+          </div>
+        </article>
+
+        <!-- 21 (Conf) -->
+        <article class="pub-card" data-type="conference">
+          <div class="pub-index">21</div>
+          <div class="pub-body">
+            <div class="pub-meta-top">
+              <span class="pub-year-badge">2012</span>
+              <span class="pub-type-badge">Conference Paper</span>
+            </div>
+            <h3 class="pub-title">Slope-Limited transport schemes using icosahedral hexagonal grid</h3>
+            <p class="pub-authors"><strong>S. Dubey</strong>, T. Dubos, and F. Hourdin</p>
+            <p class="pub-venue"><em>Solution of Partial Differential Equations on the Sphere (PDEs on the sphere)</em>, Isaac Newton Institute for Mathematical Sciences, Cambridge, U.K. (2012)</p>
+          </div>
+        </article>
+
+        <!-- 22 (Conf) -->
+        <article class="pub-card" data-type="conference">
+          <div class="pub-index">22</div>
+          <div class="pub-body">
+            <div class="pub-meta-top">
+              <span class="pub-year-badge">2011</span>
+              <span class="pub-type-badge">Conference Paper</span>
+            </div>
+            <h3 class="pub-title">Positive advection schemes for icosahedral-hexagonal grids</h3>
+            <p class="pub-authors"><strong>S. Dubey</strong>, T. Dubos, and F. Hourdin</p>
+            <p class="pub-venue"><em>NCAR Workshop on Transport Schemes on the Sphere</em>, Boulder, Colorado, USA (2011)</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 5. SPONSORED PROJECTS SECTION -->
+    <section class="section-wrapper" id="projects">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          Sponsored Research Projects
+        </h2>
+      </div>
+
+      <!-- Ongoing Projects -->
+      <h3 class="subsection-title">
+        <svg width="18" height="18" fill="#10b981" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        Ongoing / Sanctioned Projects
+      </h3>
+      <div class="projects-grid" style="margin-bottom: 2.5rem;">
+        
+        <div class="project-card ongoing">
+          <div>
+            <span class="project-status ongoing">&bull; Ongoing / Sanctioned</span>
+            <h4 class="project-title">Understanding the energetics of Tropical Cyclones in the Bay of Bengal to predict rapid intensity changes and provide future projections in the warming climate scenario</h4>
+          </div>
+          <ul class="project-details">
+            <li class="project-detail-item">
+              <span class="project-detail-label">Role:</span>
+              <span class="project-detail-val">Principal Investigator (PI)</span>
+            </li>
+            <li class="project-detail-item">
+              <span class="project-detail-label">Funding Agency:</span>
+              <span class="project-detail-val">Ministry of Earth Sciences (MoES)</span>
+            </li>
+            <li class="project-detail-item">
+              <span class="project-detail-label">Status:</span>
+              <span class="project-detail-val">Active</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-card ongoing">
+          <div>
+            <span class="project-status ongoing">&bull; Ongoing / Sanctioned</span>
+            <h4 class="project-title">Developing an ML-driven Super Ensemble for NCMRWF's Ensemble Prediction System</h4>
+          </div>
+          <ul class="project-details">
+            <li class="project-detail-item">
+              <span class="project-detail-label">Role:</span>
+              <span class="project-detail-val">Principal Investigator (PI)</span>
+            </li>
+            <li class="project-detail-item">
+              <span class="project-detail-label">Funding Agency:</span>
+              <span class="project-detail-val">Ministry of Earth Sciences (MoES)</span>
+            </li>
+            <li class="project-detail-item">
+              <span class="project-detail-label">Status:</span>
+              <span class="project-detail-val">Active</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Completed Projects -->
+      <h3 class="subsection-title">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+        Completed Projects
+      </h3>
+      <div class="projects-grid">
+        
+        <div class="project-card">
+          <div>
+            <span class="project-status completed">Completed</span>
+            <h4 class="project-title">Geophysical Flow Simulations with Geodesic Hexagonal Meshes</h4>
+          </div>
+          <ul class="project-details">
+            <li class="project-detail-item">
+              <span class="project-detail-label">PI:</span>
+              <span class="project-detail-val">Dr. Sarvesh Kumar Dubey</span>
+            </li>
+            <li class="project-detail-item">
+              <span class="project-detail-label">Funding Agency:</span>
+              <span class="project-detail-val">DST (Govt. of India)</span>
+            </li>
+            <li class="project-detail-item">
+              <span class="project-detail-label">Budget:</span>
+              <span class="project-detail-val">Rs. 35.0 Lakhs</span>
+            </li>
+            <li class="project-detail-item">
+              <span class="project-detail-label">Duration:</span>
+              <span class="project-detail-val">2018 – 2023</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <span class="project-status completed">Completed</span>
+            <h4 class="project-title">Low Pressure Systems (LPSs) and their nonlinear interaction with other scales in atmosphere through the lens of Scale Energetics</h4>
+          </div>
+          <ul class="project-details">
+            <li class="project-detail-item">
+              <span class="project-detail-label">PI:</span>
+              <span class="project-detail-val">Dr. Sarvesh Kumar Dubey</span>
+            </li>
+            <li class="project-detail-item">
+              <span class="project-detail-label">Funding Agency:</span>
+              <span class="project-detail-val">ISRO through IITD-STC</span>
+            </li>
+            <li class="project-detail-item">
+              <span class="project-detail-label">Budget:</span>
+              <span class="project-detail-val">Rs. 18.70 Lakhs</span>
+            </li>
+            <li class="project-detail-item">
+              <span class="project-detail-label">Duration:</span>
+              <span class="project-detail-val">2021 – 2023</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <span class="project-status completed">Completed</span>
+            <h4 class="project-title">Extension of spectral scale energetics to study nonlinear scale interactions in nonhydrostatic regime</h4>
+          </div>
+          <ul class="project-details">
+            <li class="project-detail-item">
+              <span class="project-detail-label">PI:</span>
+              <span class="project-detail-val">Dr. Sarvesh Kumar Dubey</span>
+            </li>
+            <li class="project-detail-item">
+              <span class="project-detail-label">Funding Agency:</span>
+              <span class="project-detail-val">SERB (Govt. of India)</span>
+            </li>
+            <li class="project-detail-item">
+              <span class="project-detail-label">Budget:</span>
+              <span class="project-detail-val">Rs. 15.0 Lakhs</span>
+            </li>
+            <li class="project-detail-item">
+              <span class="project-detail-label">Duration:</span>
+              <span class="project-detail-val">2020 – 2022</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <span class="project-status completed">Completed</span>
+            <h4 class="project-title">Application of Numerical Weather Prediction Models to Identify Probable Sites Suitable for Accumulation of Locust Swarms and Determine their Flying Path</h4>
+          </div>
+          <ul class="project-details">
+            <li class="project-detail-item">
+              <span class="project-detail-label">Funding Scheme:</span>
+              <span class="project-detail-val">FIRP Scheme</span>
+            </li>
+            <li class="project-detail-item">
+              <span class="project-detail-label">Sponsor:</span>
+              <span class="project-detail-val">IRD, IIT Delhi</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <span class="project-status completed">Completed</span>
+            <h4 class="project-title">Climate model development with an emphasis on tropics using superparametrization, scale energetics and dynamical core "DYNAMICO"</h4>
+          </div>
+          <ul class="project-details">
+            <li class="project-detail-item">
+              <span class="project-detail-label">Funding Scheme:</span>
+              <span class="project-detail-val">Faculty Seed Grant</span>
+            </li>
+            <li class="project-detail-item">
+              <span class="project-detail-label">Sponsor:</span>
+              <span class="project-detail-val">IRD, IIT Delhi</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <span class="project-status completed">Completed</span>
+            <h4 class="project-title">Equipment Matching Grant from IITD IRD to Main Project No. MI02058</h4>
+          </div>
+          <ul class="project-details">
+            <li class="project-detail-item">
+              <span class="project-detail-label">Funding Agency:</span>
+              <span class="project-detail-val">IRD, IIT Delhi</span>
+            </li>
+            <li class="project-detail-item">
+              <span class="project-detail-label">Status:</span>
+              <span class="project-detail-val">Successfully Completed</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. RESEARCH GROUP & STUDENTS SECTION -->
+    <section class="section-wrapper" id="students">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          Research Group & Mentorship
+        </h2>
+      </div>
+
+      <!-- Ph.D. Scholars -->
+      <h3 class="subsection-title">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+        Ph.D. Scholars
+      </h3>
+      <div class="students-grid" style="margin-bottom: 2.5rem;">
+        
+        <div class="student-card">
+          <div class="student-avatar">DP</div>
+          <div class="student-info">
+            <h4>Dhishana P. R.</h4>
+            <div class="student-joined">Joined July 2020</div>
+            <div class="student-topic">Spectral energetics, Indian summer monsoon, climate variability</div>
+          </div>
+        </div>
+
+        <div class="student-card">
+          <div class="student-avatar">MK</div>
+          <div class="student-info">
+            <h4>Murali Krishna</h4>
+            <div class="student-joined">Joined January 2021</div>
+            <div class="student-topic">Joint supervision with Dr. Somnath Baidya Roy (CAS) & Dr. John P. George (NCMRWF)</div>
+          </div>
+        </div>
+
+        <div class="student-card">
+          <div class="student-avatar">DP</div>
+          <div class="student-info">
+            <h4>Debjit Paul</h4>
+            <div class="student-joined">Joined July 2021</div>
+            <div class="student-topic">MPAS modeling, mesoscale convective systems over South Asia</div>
+          </div>
+        </div>
+
+        <div class="student-card">
+          <div class="student-avatar">AJ</div>
+          <div class="student-info">
+            <h4>Alice Jeeva P J</h4>
+            <div class="student-joined">Joined January 2023</div>
+            <div class="student-topic">Joint supervision with Prof. Sandeep Sukumaran</div>
+          </div>
+        </div>
+
+        <div class="student-card">
+          <div class="student-avatar">DP</div>
+          <div class="student-info">
+            <h4>Debanjan Paul</h4>
+            <div class="student-joined">Joined 2024</div>
+            <div class="student-topic">Joint supervision with Prof. Ravi K. Kunchala</div>
+          </div>
+        </div>
+
+        <div class="student-card">
+          <div class="student-avatar">DS</div>
+          <div class="student-info">
+            <h4>Digvijay Kumar Singh</h4>
+            <div class="student-joined">Joined 2025</div>
+            <div class="student-topic">Joint supervision with Prof. Ravi K. Kunchala</div>
+          </div>
+        </div>
+
+        <div class="student-card">
+          <div class="student-avatar">AD</div>
+          <div class="student-info">
+            <h4>Avijnan Das</h4>
+            <div class="student-joined">Joined 2025</div>
+            <div class="student-topic">Atmospheric dynamics & numerical weather modeling</div>
+          </div>
+        </div>
+
+        <div class="student-card">
+          <div class="student-avatar">PK</div>
+          <div class="student-info">
+            <h4>Pramod Kumar</h4>
+            <div class="student-joined">Joined 2025</div>
+            <div class="student-topic">Scale energetics & tropical weather phenomena</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- M.Tech Theses Supervised -->
+      <h3 class="subsection-title">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+        M.Tech Theses Supervised
+      </h3>
+      <div class="students-grid" style="margin-bottom: 2.5rem;">
+        
+        <div class="student-card">
+          <div class="student-avatar">AC</div>
+          <div class="student-info">
+            <h4>Alakh Niranjan Chaturvedi</h4>
+            <div class="student-joined">Batch 2023–2024</div>
+            <div class="student-topic"><em>Thesis:</em> Evaluating the Dynamical Core of DYNAMICO model</div>
+          </div>
+        </div>
+
+        <div class="student-card">
+          <div class="student-avatar">GS</div>
+          <div class="student-info">
+            <h4>Gokul Suresh</h4>
+            <div class="student-joined">Batch 2023–2024 (IISER Tirupati)</div>
+            <div class="student-topic"><em>Thesis:</em> Comparative Study of Energy Budget Analysis Between Rapidly Intensified and non Rapidly Intensified Tropical Cyclones over Bay of Bengal Region</div>
+          </div>
+        </div>
+
+        <div class="student-card">
+          <div class="student-avatar">SS</div>
+          <div class="student-info">
+            <h4>Shabeena Shahnawaz</h4>
+            <div class="student-joined">Batch 2022–2023</div>
+            <div class="student-topic"><em>Thesis:</em> Forecasting Intensity of Thunderstorm using Lightning Detection System Data with AI/ML Techniques</div>
+          </div>
+        </div>
+
+        <div class="student-card">
+          <div class="student-avatar">BK</div>
+          <div class="student-info">
+            <h4>Bharath Krishnan U</h4>
+            <div class="student-joined">Batch 2022–2023 (IISER Pune)</div>
+            <div class="student-topic"><em>Thesis:</em> Investigation of in-scale and mean flow interactions of MRG waves using spectral energetics framework</div>
+          </div>
+        </div>
+
+        <div class="student-card">
+          <div class="student-avatar">AS</div>
+          <div class="student-info">
+            <h4>Abhinav Sharma</h4>
+            <div class="student-joined">Batch 2020–2021</div>
+            <div class="student-topic"><em>Thesis:</em> An investigation of the multi-scale interactions in the Indian summer monsoon</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Project Staff -->
+      <h3 class="subsection-title">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
+        Research Project Staff
+      </h3>
+      <div class="students-grid">
+        
+        <div class="student-card">
+          <div class="student-avatar">SP</div>
+          <div class="student-info">
+            <h4>Siva Prasad Vanum</h4>
+            <div class="student-joined">Project Staff</div>
+            <div class="student-topic">Sponsored Research & Atmospheric Data Systems</div>
+          </div>
+        </div>
+
+        <div class="student-card">
+          <div class="student-avatar">SM</div>
+          <div class="student-info">
+            <h4>Shasikanta Maurya</h4>
+            <div class="student-joined">Project Staff</div>
+            <div class="student-topic">Numerical Modeling & High-Performance Computing</div>
+          </div>
+        </div>
+
+        <div class="student-card">
+          <div class="student-avatar">NN</div>
+          <div class="student-info">
+            <h4>Navyasree Nalluri</h4>
+            <div class="student-joined">Project Staff</div>
+            <div class="student-topic">Weather Prediction Diagnostics & Data Analysis</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. TEACHING & COURSES SECTION -->
+    <section class="section-wrapper" id="courses">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9z"/></svg>
+          Teaching & Postgraduate Courses
+        </h2>
+      </div>
+
+      <div class="courses-container">
+        
+        <!-- 2023-2024 -->
+        <div class="course-year-block">
+          <h3 class="course-year-header">
+            <span>Academic Year 2023 – 2024</span>
+          </h3>
+          <div class="course-cards-list">
+            <div class="course-card">
+              <span class="course-code-badge">ASL732</span>
+              <span class="course-title">Mathematical and Computational Methods for Atmosphere and Oceanic Sciences</span>
+            </div>
+            <div class="course-card">
+              <span class="course-code-badge">ASP820</span>
+              <span class="course-title">Advanced Data Analysis for Weather and Climate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2022-2023 -->
+        <div class="course-year-block">
+          <h3 class="course-year-header">
+            <span>Academic Year 2022 – 2023</span>
+          </h3>
+          <div class="course-cards-list">
+            <div class="course-card">
+              <span class="course-code-badge">ASP820</span>
+              <span class="course-title">Advanced Data Analysis for Weather and Climate</span>
+            </div>
+            <div class="course-card">
+              <span class="course-code-badge">ASL761</span>
+              <span class="course-title">Earth System Modeling</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2021-2022 -->
+        <div class="course-year-block">
+          <h3 class="course-year-header">
+            <span>Academic Year 2021 – 2022</span>
+          </h3>
+          <div class="course-cards-list">
+            <div class="course-card">
+              <span class="course-code-badge">ASP820</span>
+              <span class="course-title">Advanced Data Analysis for Weather and Climate</span>
+            </div>
+            <div class="course-card">
+              <span class="course-code-badge">ASL761</span>
+              <span class="course-title">Earth System Modeling</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2020-2021 -->
+        <div class="course-year-block">
+          <h3 class="course-year-header">
+            <span>Academic Year 2020 – 2021</span>
+          </h3>
+          <div class="course-cards-list">
+            <div class="course-card">
+              <span class="course-code-badge">ASP820</span>
+              <span class="course-title">Advanced Data Analysis for Weather and Climate</span>
+            </div>
+            <div class="course-card">
+              <span class="course-code-badge">ASL761</span>
+              <span class="course-title">Earth System Modeling</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2019-2020 -->
+        <div class="course-year-block">
+          <h3 class="course-year-header">
+            <span>Academic Year 2019 – 2020</span>
+          </h3>
+          <div class="course-cards-list">
+            <div class="course-card">
+              <span class="course-code-badge">ASL761</span>
+              <span class="course-title">Earth System Modeling</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. CONTACT SECTION -->
+    <section class="section-wrapper" id="contact">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 2 3 2.24 3 2.99 3 13.28 10.73 21 21.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+          Contact & Location Details
+        </h2>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Office Contact Card -->
+        <div class="contact-card">
+          <h3>
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Office Address
+          </h3>
+          <ul class="contact-details-list">
+            <li class="contact-item">
+              <div class="contact-icon-box">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l-5.5 9h11z"/></svg>
+              </div>
+              <div class="contact-item-info">
+                <h5>Faculty</h5>
+                <p><strong>Dr. Sarvesh Kumar Dubey</strong><br>Associate Professor</p>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon-box">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+              </div>
+              <div class="contact-item-info">
+                <h5>Department</h5>
+                <p>Centre for Atmospheric Sciences (CAS)<br>Indian Institute of Technology Delhi<br>Hauz Khas, New Delhi – 110016, India</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Electronic Contact Card -->
+        <div class="contact-card">
+          <h3>
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            Communication Channels
+          </h3>
+          <ul class="contact-details-list">
+            
+            <li class="contact-item">
+              <div class="contact-icon-box">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </div>
+              <div class="contact-item-info">
+                <h5>Email Address</h5>
+                <p>
+                  <a href="mailto:skdubey@cas.iitd.ac.in" style="font-weight: 700; color: var(--iitd-maroon);">skdubey@cas.iitd.ac.in</a>
+                  <button class="copy-btn" onclick="copyEmail('skdubey@cas.iitd.ac.in')" title="Copy email address">Copy</button>
+                </p>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon-box">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              </div>
+              <div class="contact-item-info">
+                <h5>Telephone</h5>
+                <p><a href="tel:+911126548417">+91-11-2654-8417</a></p>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon-box">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+              </div>
+              <div class="contact-item-info">
+                <h5>Research Group Portal</h5>
+                <p><a href="https://tropx.iitd.ac.in" target="_blank" rel="noopener noreferrer">https://tropx.iitd.ac.in</a></p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER (IIT DELHI CAS BRANDED)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <img src="assets/images/iitd_logo_official.png" alt="IIT Delhi Seal">
+          <div>
+            <h4>Indian Institute of Technology Delhi</h4>
+            <p>
+              Centre for Atmospheric Sciences (CAS)<br>
+              Hauz Khas, New Delhi – 110016, India<br>
+              <em>Excellence in Atmospheric, Oceanic, and Climate Sciences</em>
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h5>Quick Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="#about">About Overview</a></li>
+            <li><a href="#biosketch">Bio-Sketch & Experience</a></li>
+            <li><a href="#research">Research Pillars</a></li>
+            <li><a href="#publications">Publications (22)</a></li>
+            <li><a href="#projects">Sponsored Projects</a></li>
+            <li><a href="#students">Research Group</a></li>
+            <li><a href="#courses">Teaching & Courses</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Institutional Links</h5>
+          <ul class="footer-links">
+            <li><a href="https://cas.iitd.ac.in" target="_blank" rel="noopener noreferrer">CAS IIT Delhi</a></li>
+            <li><a href="https://home.iitd.ac.in" target="_blank" rel="noopener noreferrer">IIT Delhi Main Site</a></li>
+            <li><a href="https://tropx.iitd.ac.in" target="_blank" rel="noopener noreferrer">tropX Research Lab</a></li>
+            <li><a href="https://scholar.google.co.in/citations?user=Z5Tkv24AAAAJ&hl=en&oi=sra" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+            <li><a href="https://orcid.org/0000-0003-3454-6864" target="_blank" rel="noopener noreferrer">ORCID Profile</a></li>
+            <li><a href="https://www.researchgate.net/profile/Sarvesh_Dubey2" target="_blank" rel="noopener noreferrer">ResearchGate</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Themes</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Academic (Default)</a></li>
+            <li><a href="classic/">Classic Minimal</a></li>
+            <li><a href="terminal/">Terminal CLI</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Dr. Sarvesh Kumar Dubey. All rights reserved. Indian Institute of Technology Delhi.
+        </div>
+        <div>
+          Faculty Webpage &bull; Local Archival & Modern Redesign
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
