@@ -1,0 +1,225 @@
+/* =====================================================================
+   STYLES — terminal / GitHub-dark theme.
+   Change colours and font size in the block just below.
+   ===================================================================== */
+:root {
+  --bg:        #0d1117;   /* page background (GitHub dark) */
+  --panel:     #161b22;   /* windows / cards */
+  --panel-2:   #1c2128;   /* window title bars, table rows */
+  --border:    #30363d;
+  --text:      #e6edf3;
+  --dim:       #9da7b3;   /* secondary text */
+  --green:     #3fb950;   /* prompt + highlights */
+  --blue:      #58a6ff;   /* links */
+  --orange:    #f0883e;   /* active tab underline */
+  --purple:    #d2a8ff;
+  --banner:    #0b2440;   /* IIT Delhi banner (navy) */
+
+  --font-size: 17px;      /* base text size — increase for larger text */
+  --mono: "JetBrains Mono", "Fira Code", Consolas, "DejaVu Sans Mono", monospace;
+  --max-width: 1200px;
+  --strong:    #ffffff;
+  --chip:      #30363d;
+}
+
+/* ---------- LIGHT MODE colours (used when the toggle is set to light) ---------- */
+[data-theme="light"] {
+  --bg:        #ffffff;
+  --panel:     #f6f8fa;
+  --panel-2:   #eaeef2;
+  --border:    #d0d7de;
+  --text:      #1f2328;
+  --dim:       #59636e;
+  --green:     #1a7f37;
+  --blue:      #0969da;
+  --orange:    #bc4c00;
+  --purple:    #8250df;
+  --strong:    #000000;
+  --chip:      #d0d7de;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+body {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: var(--font-size);
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+}
+img { max-width: 100%; }
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+strong { color: var(--strong); }
+.dim { color: var(--dim); }
+.green { color: var(--green); font-weight: 700; }
+.blue { color: var(--blue); }
+
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
+
+/* ---------- IIT Delhi banner ---------- */
+.banner {
+  background: linear-gradient(120deg, #07182c, var(--banner) 55%, #12355b);
+  border-bottom: 1px solid var(--border);
+  color: #fff;
+}
+.banner-inner { display: flex; align-items: center; gap: 20px; padding: 16px 20px; }
+.banner-logo { width: 88px; height: 88px; display: block; }
+.banner-hindi { font-family: sans-serif; font-size: 1rem; opacity: .85; }
+.banner-institute { font-size: 1.6rem; font-weight: 700; line-height: 1.3; }
+.banner-dept { color: var(--green); font-size: 1rem; }
+.banner-dept::before { content: "> "; }
+
+/* ---------- Tabs (GitHub style) ---------- */
+.tabs { background: var(--bg); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 10; }
+.tabs-inner { display: flex; flex-wrap: wrap; }
+.tabs a {
+  color: var(--text); padding: 13px 16px; font-size: .95rem;
+  border-bottom: 2px solid transparent; text-decoration: none;
+}
+.tabs a:hover { background: var(--panel); }
+.tabs a.active { border-bottom-color: var(--orange); font-weight: 700; }
+.count {
+  display: inline-block; background: var(--chip); border-radius: 999px;
+  padding: 0 8px; font-size: .8rem; margin-left: 4px;
+}
+
+/* Light / dark toggle button */
+.theme-toggle {
+  margin-left: auto; align-self: center; cursor: pointer;
+  background: var(--panel); color: var(--text); border: 1px solid var(--border);
+  border-radius: 6px; padding: 5px 12px; font: inherit; font-size: .9rem;
+}
+.theme-toggle:hover { border-color: var(--blue); }
+
+/* ---------- Terminal windows ---------- */
+main section { margin: 28px 0; }
+.window { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.window-bar {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--panel-2); padding: 10px 14px; border-bottom: 1px solid var(--border);
+}
+.dot { width: 13px; height: 13px; border-radius: 50%; }
+.red { background: #ff5f56; } .yellow { background: #ffbd2e; } .green.dot, .dot.green { background: #27c93f; }
+.window-title { color: var(--dim); font-size: .9rem; margin-left: 10px; }
+.window-body { padding: 24px 30px; }
+
+h1, h2, h3, h4 { line-height: 1.35; }
+h1 { font-size: 1.5rem; margin: 14px 0 4px; }
+h2 { font-size: 1.5rem; margin: 0 0 8px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 1.15rem; margin: 30px 0 14px; }
+h4 { font-size: 1rem; margin: 0 0 10px; color: var(--blue); }
+.hash { color: var(--green); }
+
+/* Command lines */
+.cmd { margin: 18px 0 6px; color: var(--text); font-weight: 600; }
+.cmd:first-child { margin-top: 0; }
+.prompt { color: var(--green); margin-right: 8px; }
+.out { margin: 0 0 6px; padding-left: 2px; }
+#about p { margin: 0 0 14px; }
+.cursor {
+  display: inline-block; width: 10px; height: 1.1em; background: var(--green);
+  vertical-align: text-bottom; animation: blink 1s steps(1) infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+/* ---------- Profile ---------- */
+.profile { display: grid; grid-template-columns: 290px 1fr; gap: 28px; align-items: start; }
+.photo { width: 100%; border-radius: 50%; border: 1px solid var(--border); aspect-ratio: 1; object-fit: cover; }
+.title { color: var(--text); margin: 0 0 16px; font-size: .95rem; }
+.links { display: flex; flex-direction: column; gap: 8px; }
+.links a {
+  display: flex; align-items: center; gap: 10px; padding: 8px 12px;
+  background: var(--panel); border: 1px solid var(--border); border-radius: 6px;
+  color: var(--text); font-size: .95rem;
+}
+.links a:hover { border-color: var(--blue); text-decoration: none; }
+.links img { width: 24px; height: 24px; }
+.icon-text {
+  width: 24px; height: 24px; border-radius: 50%; background: #00ccbb; color: #fff;
+  display: inline-flex; align-items: center; justify-content: center; font-size: .7rem;
+}
+.group-card {
+  display: flex; align-items: center; gap: 16px; padding: 14px;
+  border: 1px dashed var(--green); border-radius: 8px; color: var(--text); margin-bottom: 6px;
+}
+.group-card:hover { background: var(--panel-2); text-decoration: none; }
+.group-card img { width: 80px; height: 80px; border-radius: 6px; object-fit: cover; }
+
+/* ---------- Lists ---------- */
+.labels { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.labels li {
+  color: var(--blue); background: rgba(56,139,253,.12); border: 1px solid rgba(56,139,253,.4);
+  padding: 2px 14px; border-radius: 999px; font-size: .95rem;
+}
+
+/* git-log style timeline */
+.log { list-style: none; padding: 0; margin: 0; border-left: 2px solid var(--border); }
+.log li { position: relative; display: flex; gap: 18px; padding: 6px 0 14px 22px; }
+.log li::before {
+  content: ""; position: absolute; left: -7px; top: 14px;
+  width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid var(--green);
+}
+.hash-id { color: var(--orange); min-width: 220px; font-size: .95rem; }
+
+.pubs { padding-left: 2.6em; }
+.pubs li { margin-bottom: 14px; padding-left: 6px; }
+.pubs li::marker { color: var(--green); }
+.pubs b { color: var(--purple); }
+.doi { color: var(--blue); font-size: .9rem; }
+
+/* file-tree style list */
+.tree { list-style: none; padding: 0; margin: 0; }
+.tree li { padding: 3px 0 3px 2.2em; position: relative; }
+.tree li::before { content: "├──"; position: absolute; left: 0; color: var(--dim); }
+.tree li:last-child::before { content: "└──"; }
+
+/* ---------- Repo cards ---------- */
+.repos { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 16px; }
+.repo {
+  position: relative; background: var(--bg); border: 1px solid var(--border);
+  border-radius: 8px; padding: 16px 18px 44px; font-size: .95rem;
+}
+.repo:hover { border-color: var(--dim); }
+.repo-icon { color: var(--dim); }
+.repo ul { margin: 0; padding-left: 1.2em; }
+.key { color: var(--dim); }
+.badge {
+  position: absolute; left: 18px; bottom: 12px; font-size: .78rem;
+  padding: 0 10px; border-radius: 999px; border: 1px solid;
+}
+.badge.ongoing { color: var(--green); border-color: var(--green); }
+.badge.completed { color: var(--purple); border-color: var(--purple); }
+#course-list .repo { padding-bottom: 16px; }
+
+/* ---------- Table ---------- */
+.table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; }
+table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { background: var(--panel-2); color: var(--dim); }
+tr:last-child td { border-bottom: none; }
+td:first-child { color: var(--orange); white-space: nowrap; }
+
+/* ---------- Footer ---------- */
+.footer { border-top: 1px solid var(--border); color: var(--dim); text-align: center; padding: 22px 0; font-size: .85rem; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 800px) {
+  :root { --font-size: 16px; }
+  .container { padding: 0 16px; }
+  .banner-inner { gap: 12px; padding: 12px 16px; }
+  .banner-logo { width: 60px; height: 60px; }
+  .banner-institute { font-size: 1.05rem; }
+  .banner-hindi, .banner-dept { font-size: .85rem; }
+  .tabs a { padding: 9px 10px; font-size: .85rem; }
+  .theme-toggle { margin: 6px 0 6px auto; }
+  .profile { grid-template-columns: 1fr; }
+  .profile-side { max-width: 320px; margin: 0 auto; text-align: center; }
+  .photo { width: 200px; }
+  .links a { justify-content: center; }
+  .window-body { padding: 18px 16px; }
+  .log li { flex-direction: column; gap: 0; }
+  .hash-id { min-width: 0; }
+  .repos { grid-template-columns: 1fr; }
+}

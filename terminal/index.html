@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dr. Sarvesh Kumar Dubey | IIT Delhi</title>
+  <meta name="description" content="Faculty homepage of Dr. Sarvesh Kumar Dubey, Centre for Atmospheric Sciences, IIT Delhi.">
+  <link rel="icon" href="images/iitd-logo-white.png">
+
+  <!-- Fonts (the site still works offline with system monospace fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= TOP BANNER (IIT Delhi) ================= -->
+  <header class="banner">
+    <div class="container banner-inner">
+      <a href="https://home.iitd.ac.in" target="_blank" rel="noopener">
+        <img class="banner-logo" src="images/iitd-logo-white.png" alt="IIT Delhi logo">
+      </a>
+      <div>
+        <div class="banner-hindi">भारतीय प्रौद्योगिकी संस्थान दिल्ली</div>
+        <div class="banner-institute">Indian Institute of Technology Delhi</div>
+        <div class="banner-dept" id="banner-dept"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= TABS (GitHub style) ================= -->
+  <nav class="tabs">
+    <div class="container tabs-inner">
+      <a href="#home">~/home</a>
+      <a href="#biosketch">bio-sketch</a>
+      <a href="#publications">publications <span class="count" id="pub-count"></span></a>
+      <a href="#projects">projects <span class="count" id="proj-count"></span></a>
+      <a href="#students">students</a>
+      <a href="#courses">courses</a>
+      <a href="#contact">contact</a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch light / dark mode"></button>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- ================= HOME / PROFILE ================= -->
+    <section id="home" class="profile">
+      <aside class="profile-side">
+        <img id="photo" class="photo" alt="Photo of Dr. Sarvesh Kumar Dubey">
+        <h1 id="name"></h1>
+        <p id="title" class="title"></p>
+        <div id="links" class="links"></div>
+      </aside>
+
+      <div class="window">
+        <div class="window-bar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="window-title">skdubey@iitd: ~</span>
+        </div>
+        <div class="window-body">
+          <p class="cmd"><span class="prompt">skdubey@iitd:~$</span> whoami</p>
+          <p class="out" id="whoami"></p>
+          <p class="cmd"><span class="prompt">skdubey@iitd:~$</span> cat about.md</p>
+          <div class="out" id="about"></div>
+          <p class="cmd"><span class="prompt">skdubey@iitd:~$</span> open research-group</p>
+          <a id="group" class="group-card" target="_blank" rel="noopener"></a>
+          <p class="cmd"><span class="prompt">skdubey@iitd:~$</span> <span class="cursor"></span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BIO-SKETCH ================= -->
+    <section id="biosketch" class="window">
+      <div class="window-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="window-title">bio-sketch.md</span></div>
+      <div class="window-body">
+        <h2><span class="hash">#</span> Bio-Sketch</h2>
+
+        <h3><span class="hash">##</span> Areas of Interest</h3>
+        <ul id="interests" class="labels"></ul>
+
+        <h3><span class="hash">##</span> Positions Held</h3>
+        <ul id="positions" class="log"></ul>
+
+        <h3><span class="hash">##</span> Qualifications</h3>
+        <ul id="education" class="log"></ul>
+      </div>
+    </section>
+
+    <!-- ================= PUBLICATIONS ================= -->
+    <section id="publications" class="window">
+      <div class="window-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="window-title">publications.bib</span></div>
+      <div class="window-body">
+        <h2><span class="hash">#</span> Publications</h2>
+
+        <h3><span class="hash">##</span> Papers in Refereed Journals</h3>
+        <ol id="journals" class="pubs"></ol>
+
+        <h3><span class="hash">##</span> Conference Presentations / Proceedings</h3>
+        <ol id="conferences" class="pubs"></ol>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="window">
+      <div class="window-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="window-title">projects/</span></div>
+      <div class="window-body">
+        <h2><span class="hash">#</span> Sponsored Research Projects</h2>
+
+        <h3><span class="hash">##</span> Ongoing / Sanctioned</h3>
+        <div id="projects-ongoing" class="repos"></div>
+
+        <h3><span class="hash">##</span> Completed</h3>
+        <div id="projects-completed" class="repos"></div>
+      </div>
+    </section>
+
+    <!-- ================= STUDENTS ================= -->
+    <section id="students" class="window">
+      <div class="window-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="window-title">team.md</span></div>
+      <div class="window-body">
+        <h2><span class="hash">#</span> Students &amp; Team</h2>
+
+        <h3><span class="hash">##</span> Ph.D. Students</h3>
+        <ul id="phd" class="tree"></ul>
+
+        <h3><span class="hash">##</span> M.Tech. Students</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>YEAR</th><th>STUDENT</th><th>THESIS</th></tr></thead>
+            <tbody id="mtech"></tbody>
+          </table>
+        </div>
+
+        <h3><span class="hash">##</span> Project Staff</h3>
+        <ul id="staff" class="tree"></ul>
+      </div>
+    </section>
+
+    <!-- ================= COURSES ================= -->
+    <section id="courses" class="window">
+      <div class="window-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="window-title">courses.log</span></div>
+      <div class="window-body">
+        <h2><span class="hash">#</span> Courses Taught</h2>
+        <div id="course-list" class="repos"></div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="window">
+      <div class="window-bar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="window-title">contact.sh</span></div>
+      <div class="window-body">
+        <h2><span class="hash">#</span> Contact</h2>
+        <div id="contact-box"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container" id="footer"></div>
+  </footer>
+
+  <!-- All text comes from data.js — edit that file to change content -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
