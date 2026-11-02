@@ -1198,6 +1198,24 @@ img {
   flex-shrink: 0;
 }
 
+.student-avatar.graduated {
+  position: relative;
+  box-shadow: 0 0 0 2px var(--iitd-gold);
+}
+
+.student-avatar .avatar-crown {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  width: 20px;
+  height: 14px;
+  transform: translateX(-50%) rotate(-12deg);
+  fill: var(--iitd-gold);
+  stroke: var(--iitd-gold-dark);
+  stroke-width: 1;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.2));
+}
+
 .student-info h4 {
   font-size: 1rem;
   font-weight: 700;
